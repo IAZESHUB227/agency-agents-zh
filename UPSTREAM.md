@@ -2,22 +2,23 @@
 
 记录本项目对应的上游 [agency-agents](https://github.com/msitarzewski/agency-agents) 版本，方便同步更新。
 
-## 当前状态（2026-10-21 核对）
+## 当前状态（2026-10-26 核对）
 
 - **上游仓库**：https://github.com/msitarzewski/agency-agents
-- **同步基线**：2026-10-20，上游 [`4e3ac3c`](https://github.com/msitarzewski/agency-agents/tree/4e3ac3c)（此前为 2026-10-19 的 `652b269`、2026-06-16 的 `3f78a30`）。
-- **本地实际角色数**：**328**，其中目录标注翻译 **261**、原创 **67**。来源分类以 [AGENT-LIST.md](AGENT-LIST.md) 为准，不等同于当前上游覆盖数。
-- **覆盖状态**：路径层面已追平 `4e3ac3c`，上游自 `3f78a30` 以来对同名角色的改动均已同步。但 2026-10-20 按代码块逐个比对时发现，部分译文早于 `3f78a30`，本就落后于当时的上游，按"基线之后的改动"同步时漏不出来；清单与处理进度见 [差异审计](UPSTREAM-AUDIT.md)。上游的 README、CONTRIBUTING 与 integrations 文档按本地项目自行维护，不逐字同步。
+- **同步基线**：2026-10-24，上游 [`b37b5bb`](https://github.com/msitarzewski/agency-agents/tree/b37b5bb)（此前为 2026-10-20 的 `4e3ac3c`、2026-10-19 的 `652b269`、2026-06-16 的 `3f78a30`）。
+- **本地实际角色数**：**329**，其中目录标注翻译 **262**、原创 **67**。来源分类以 [AGENT-LIST.md](AGENT-LIST.md) 为准，不等同于当前上游覆盖数。
+- **覆盖状态**：路径层面已追平 `b37b5bb`，上游自 `3f78a30` 以来对同名角色的改动均已同步。但 2026-10-20 按代码块逐个比对时发现，部分译文早于 `3f78a30`，本就落后于当时的上游，按"基线之后的改动"同步时漏不出来；清单与处理进度见 [差异审计](UPSTREAM-AUDIT.md)。上游的 README、CONTRIBUTING 与 integrations 文档按本地项目自行维护，不逐字同步。
 - **遗留事项**：`engineering/engineering-security-engineer.md` 与 `engineering/engineering-threat-detection-engineer.md` 在上游已改名迁入 `security/`，本地新旧两份并存。暂时保留旧文件并在开头注明新路径。Agency Orchestrator 的 5 个中文工作流已在 AO 提交 `1168eb4` 中改用新路径（尚未发版）；`en/pr-review.yaml` 用的是 AO 随包的英文角色库，仍引用旧路径，与本仓库无关。待 AO 带着新路径发版、旧版本基本不再使用后，再删除这两个旧文件。
-- **本次完成**：根据 [issue #97](https://github.com/jnMetaCode/agency-agents-zh/issues/97) 标题补充嵌入式算法、嵌入式应用两个原创角色；同步简繁 README、名单、速查表与包描述，修正部门和来源计数，并将计数检查接入 CI。
+- **本次完成（2026-10-26）**：同步上游 `4e3ac3c → b37b5bb` 唯一的角色变化——新增**电气工程师**（`engineering/engineering-electrical-engineer.md`，英文 575 行全文译为中文，删除本地不使用的 `vibe` 字段），并把 5 篇历史遗留的 frontmatter 字段顺序统一为 name→description→emoji→color；同步简繁 README 阵容、名单、速查表与包描述，计数 328 → 329，版本升至 1.6.0。
+- **上次完成（2026-10-21）**：根据 [issue #97](https://github.com/jnMetaCode/agency-agents-zh/issues/97) 标题补充嵌入式算法、嵌入式应用两个原创角色；同步简繁 README、名单、速查表与包描述，修正部门和来源计数，并将计数检查接入 CI。
 
 ## 翻译覆盖
 
 | 本地来源分类 | 数量 |
 |-------------|------|
-| 翻译 | 261 |
+| 翻译 | 262 |
 | 原创 | 67 |
-| **合计** | **328** |
+| **合计** | **329** |
 
 新增或改名的上游角色需要先检查路径映射与职责重叠，再决定翻译、合并或保留本地原创。不能只比较上下游总数判断是否同步。
 
@@ -127,3 +128,11 @@
 | `engineering/engineering-payments-billing-engineer.md` | `4ffffc09e63586aced1c715607d11bf6eb13b036` |
 | `engineering/engineering-rag-pipeline-engineer.md` | `6f468dc0fd516ed825966de2d0bd6af2247e2d7d` |
 | `testing/testing-test-automation-engineer.md` | `59650291b60ed280f8f5d5da69f15fec2aea3dca` |
+
+## 2026-10-26 电气工程师
+
+上游 `b37b5bb`（PR #1177）新增 `engineering/engineering-electrical-engineer.md`，是 `4e3ac3c → b37b5bb` 之间唯一的角色文件变化（其余改动为 README 与转换产物校验文件）。本批为逐行全文翻译：frontmatter 按本地规范重排为 name→description→emoji→color 并去掉 `vibe`；代码块、ASCII 交付物内的说明与注释译为中文，标准编号（IEC/GB/NFPA 等）、标识符与路径保留原样；开头保留"专业审签边界"表述，明确该角色不替代注册电气工程师签字。
+
+| 本地文件 | 上游来源 |
+|----------|----------|
+| `engineering/engineering-electrical-engineer.md` | [上游原文](https://github.com/msitarzewski/agency-agents/blob/b37b5bb/engineering/engineering-electrical-engineer.md) |

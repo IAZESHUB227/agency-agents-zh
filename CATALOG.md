@@ -60,7 +60,7 @@
 | 视频提示词工程师 | `design/design-video-prompt-engineer.md` |
 | UI 收尾审查员 | `design/design-ui-finish-gate-reviewer.md` |
 
-## 🛠️ 工程部 (75)
+## 🛠️ 工程部 (76)
 
 | 中文名 | 文件路径 |
 |--------|----------|
@@ -139,6 +139,7 @@
 | 语音 AI 集成工程师 | `engineering/engineering-voice-ai-integration-engineer.md` |
 | 国内网络工程师 | `engineering/engineering-network-engineer-china.md` |
 | 微信小程序开发者 | `engineering/engineering-wechat-mini-program-developer.md` |
+| 电气工程师 | `engineering/engineering-electrical-engineer.md` |
 
 ## 🏦 金融部 (9)
 
